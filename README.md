@@ -18,10 +18,15 @@ cd gst-rtsp-server-v4l2
 make
 ```
 
-# Run
+# Run 
+## server
 on Linux
 ```
 ./test-multicast-v4l2
+```
+## client
+```
+gst-launch-1.0 rtspsrc location=rtsp://localhost:8554/test latency=0 ! decodebin ! autovideosink
 ```
 
 # Contact
